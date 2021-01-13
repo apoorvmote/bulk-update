@@ -1,0 +1,21 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  project1:
+    taskfile: ./project1/Taskfile.yml
+    dir: ./project1
+  project2:
+    taskfile: ./project2/Taskfile.yml
+    dir: ./project2
+  project3:
+    taskfile: ./project3/Taskfile.yml
+    dir: ./project3
+
+tasks:
+  default:
+    cmds:
+      - task project1:update
+      - task project2:update
+      - task project3:update
